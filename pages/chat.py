@@ -6,9 +6,13 @@ from share_state import get_server_state, set_server_state
 import streamlit as st
 from dotenv import load_dotenv
 from streamlit_pills import pills
+from util import hide_header_footer
+
 
 load_dotenv()
 st.set_page_config(page_title="Persona Chat",layout='wide', initial_sidebar_state='collapsed')
+
+hide_header_footer()
 
 persona_prompt = get_server_state("persona_prompt")
 persona_role = get_server_state("persona_role")
