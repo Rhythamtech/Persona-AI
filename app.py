@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from streamlit_pills import pills
-from share_state import initialise_server_state, set_server_state
+from share_state import set_server_state
 from util import hide_header_footer
 
 st.set_page_config(page_title="Persona ~AI",layout='wide', initial_sidebar_state='collapsed')
@@ -19,11 +19,6 @@ st.markdown("""
             """,unsafe_allow_html=True)
 
 
-
-initialise_server_state("persona_id", None)
-initialise_server_state("persona_role", None)
-initialise_server_state("persona_prompt", None)
-initialise_server_state("description", None)
 
 def open_chat(id,role,prompt,description):
     set_server_state("persona_id", id)

@@ -22,7 +22,6 @@ st.header(f"Presenting {persona_role} in your service.", divider='rainbow')
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "system", "content": persona_prompt},{"role": "assistant", "content": description}]
-    st.write("EMPTY STATE")
 
 if st.session_state["messages"][1]["content"] != description:
     st.session_state["messages"] = [{"role": "system", "content": persona_prompt},{"role": "assistant", "content": description}]
