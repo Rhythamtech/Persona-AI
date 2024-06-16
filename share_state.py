@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_server_state import server_state, server_state_lock 
 
-
 def initialise_server_state(key, value):
     with server_state_lock[key]:
         if key not in server_state:

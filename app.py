@@ -56,14 +56,6 @@ row5 = st.columns(4)
 
 grid  = [ cell.container(border=True) for cell in row1+row2+row3+row4+row5]
 
-
-# import csv
-# with open('persona.csv', 'r') as file:
-#     csv_file = csv.DictReader(file)
-#     for row in csv_file:
-#         grid[int(row["Id"]) -1].markdown(row["Role"])
-
-
 if selected != "All":   
     df =  df[df['Category'] == format(selected)]
 
